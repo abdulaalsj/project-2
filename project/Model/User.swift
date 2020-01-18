@@ -15,10 +15,34 @@ struct  User  {
     let email  : String
     let password : String
     
+    init( _ email: String, _ password: String)
+    {
+        self.email = email
+        self.password = password
+    }
+    
    
     
+   
     
+
+
+}
+//extenstion User : Equatable {
+//    static func == (1hs: User, rhs: User ) -> Bool {
+//        return
+//        1hs.
+//
+//    }
     
+
+extension User : Equatable {
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        return
+            lhs.email == rhs.email &&
+            lhs.password == rhs.password
+    }
 }
 
 
