@@ -38,14 +38,5 @@ struct UsersManager {
 }
     
    
-//    func CheckUser(e: String, p: String); _-> Bool {
-//
-//
-//
-//        let userChecked = User(email: e, password: p)
-//
-//         Users.contains(userChecked)
-//
-//    }
-//}
+
 }

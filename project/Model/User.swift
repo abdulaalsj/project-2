@@ -28,12 +28,7 @@ struct  User  {
 
 
 }
-//extenstion User : Equatable {
-//    static func == (1hs: User, rhs: User ) -> Bool {
-//        return
-//        1hs.
-//
-//    }
+
     
 
 extension User : Equatable {
