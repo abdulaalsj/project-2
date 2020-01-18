@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var usersManager = UsersManager()
     
     @IBOutlet weak var email: UITextField!
     
@@ -18,10 +19,18 @@ class ViewController: UIViewController {
  
     @IBAction func Register(_ sender: Any) {
         
-        let secondVC = SecondViewController()
+        if let  email = email.text,  let password =  password.text {
+            
+            usersManager.CreateUser(e: email, p: password)
+            let secondVC = SecondViewController()
+            secondVC.message = "Registration Successful"
+            
+            
+            
+            present(secondVC, animated: true, completion: nil)
+        }
         
         
-        present(secondVC, animated: true, completion: nil)
     }
     
     

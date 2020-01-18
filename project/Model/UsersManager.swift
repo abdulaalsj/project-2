@@ -22,6 +22,8 @@ struct UsersManager {
         
         Users.append(newUser)
         
+        print(Users)
+        
         
     }
 }

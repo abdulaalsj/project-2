@@ -9,6 +9,10 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var usersManager = UsersManager()
+    
+    var message : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +20,8 @@ class SecondViewController: UIViewController {
         view.backgroundColor = .blue
 
         let label  = UILabel()
-             label.text  = "Hello"
-             label.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
+             label.text  = message ?? "There has been an Error"
+             label.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
         
         view.addSubview(label)
     }
