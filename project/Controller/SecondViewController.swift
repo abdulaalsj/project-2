@@ -13,6 +13,8 @@ class SecondViewController: UIViewController {
     var usersManager = UsersManager()
     
     var message : String?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class SecondViewController: UIViewController {
 
         let label  = UILabel()
              label.text  = message ?? "There has been an Error"
-             label.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+        label.frame = CGRect(x: self.view.bounds.midX - 50, y: self.view.bounds.midY - 100, width: 400, height: 200)
         
         view.addSubview(label)
     }

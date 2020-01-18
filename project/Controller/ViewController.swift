@@ -24,6 +24,7 @@ class ViewController: UIViewController {
             usersManager.CreateUser(e: email, p: password)
             let secondVC = SecondViewController()
             secondVC.message = "Registration Successful"
+            secondVC.view.backgroundColor = #colorLiteral(red: 0.9852429032, green: 0.8804653883, blue: 0.4830150008, alpha: 1)
             
             
             
@@ -36,6 +37,18 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         
+        
+        if let  email = email.text,  let password =  password.text {
+                   
+                   usersManager.CreateUser(e: email, p: password)
+                   let secondVC = SecondViewController()
+                   secondVC.message = "Log In Successful"
+            secondVC.view.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+                   
+                   
+                   
+                   present(secondVC, animated: true, completion: nil)
+               }
         
     }
     override func viewDidLoad() {
